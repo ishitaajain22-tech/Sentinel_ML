@@ -1,0 +1,65 @@
+/* src/styles/globals.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background: #06060a;
+  color: #ffffff;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+input, button, textarea, select {
+  color: #ffffff;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+option {
+  background: #0a0a0f;
+  color: #ffffff;
+}
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.18); }
+
+/* ── Keyframes ─────────────────────────────────────── */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.35; }
+  50%       { opacity: 0.08; }
+}
+@keyframes scanDown {
+  0%   { top: -2px; }
+  100% { top: 100vh; }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.85); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.card-fade { animation: fadeIn 0.3s ease forwards; }
